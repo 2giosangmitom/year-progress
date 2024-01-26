@@ -1,5 +1,5 @@
 {
-  description = "Fireworks canvas, made with Next.js. Happy new year!";
+  description = "Happy new year";
   inputs = {
     nixpkgs.url = "nixpkgs/nixos-unstable";
   };
