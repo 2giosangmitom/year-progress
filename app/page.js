@@ -2,17 +2,27 @@
 import { useEffect, useRef } from "react";
 
 export default function Home() {
-	const ref = useRef(null);
+	const canvasRef = useRef(null);
 	useEffect(() => {
 		/** @type {HTMLCanvasElement} */
-		const canvas = ref.current;
+		const canvas = canvasRef.current;
+		const context = canvas.getContext("2d");
 		canvas.width = window.innerWidth;
 		canvas.height = window.innerHeight;
-		/** @type {CanvasRenderingContext2D} */
-		const ctx = canvas.getContext("2d");
-		ctx.fillStyle = "black";
-		ctx.fillRect(0, 0, canvas.width, canvas.height);
+		context.fillStyle = "black";
+		context.fillRect(0, 0, canvas.width, canvas.height);
+
+		const resizeHandle = () => {
+			canvas.width = window.innerWidth;
+			canvas.height = window.innerHeight;
+			context.fillRect(0, 0, canvas.width, canvas.height);
+		};
+		window.addEventListener("resize", resizeHandle);
+
+		return () => {
+			window.removeEventListener("resize", resizeHandle);
+		};
 	}, []);
 
-	return <canvas ref={ref} />;
+	return <canvas ref={canvasRef} />;
 }
