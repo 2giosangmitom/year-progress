@@ -10,13 +10,13 @@ export default function Home() {
 
 	return (
 		<>
-			<header>
-				<h1>
+			<header className="sm:mt-5">
+				<h1 className="xl:text-2xl xl:font-bold sm:text-lg">
 					Year progress - {month} / {year}
 				</h1>
 			</header>
 
-			<main>
+			<main className="xl:grid xl:grid-cols-2 gap-4 mt-10">
 				<YearProgress />
 				<MonthProgress />
 				<DayProgress />
