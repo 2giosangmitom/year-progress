@@ -3,9 +3,11 @@ import "./globals.css";
 
 const font = Fira_Code({ subsets: ["latin"], weight: "600" });
 
+/** @type {import("next").Metadata} */
 export const metadata = {
 	title: "Year progress",
-	description: "Year progress",
+	description: "Year progress, made with Next.js, Tailwind",
+	metadataBase: new URL("https://pheloiprogress.vercel.app/"),
 };
 
 export default function RootLayout({ children }) {
