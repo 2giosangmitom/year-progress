@@ -28,9 +28,15 @@ export function dayOfYear() {
 		(start.getTimezoneOffset() - now.getTimezoneOffset()) * 60 * 1000;
 	const oneDay = 1000 * 60 * 60 * 24;
 	const dayOfYear = Math.floor(diff / oneDay);
+
 	return dayOfYear;
 }
 
-export function getYearProgress(day, numOfDays) {
+export function getYearProgress() {
+	const date = new Date();
+	const currentYear = date.getUTCFullYear();
+	const day = dayOfYear();
+	const numOfDays = daysInYear(currentYear);
+
 	return `${((day / numOfDays) * 100).toFixed(2)}%`;
 }
