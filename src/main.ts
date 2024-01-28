@@ -1,23 +1,27 @@
 import "./style.css";
+import type { Text, Fire, Fireworks, Light, Spark, Special } from "../types";
 
-/** @type {HTMLCanvasElement} */
-const canvas = document.getElementById("fireworks");
+const canvas = document.getElementById("canvas") as HTMLCanvasElement;
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 const ctx = canvas.getContext("2d");
+if (!ctx) {
+	throw new Error("Error occurred");
+}
 
-const listFire = [];
-const listFirework = [];
-const listSpecial = [];
-const listSpark = [];
-const lights = [];
+const listFire: Fire[] = [];
+const listFirework: Fireworks[] = [];
+const listSpecial: Special[] = [];
+const listText: Text[] = [];
+const listSpark: Spark[] = [];
+const lights: Light[] = [];
 const fireNumber = 10;
 const center = { x: canvas.width / 2, y: canvas.height / 2 };
 const range = 100;
 let fired = 0;
 let onHold = 0;
 let supprise = false;
-let fire = {};
+let fire: Fire;
 
 for (let i = 0; i < fireNumber; i++) {
 	fire = {
@@ -32,6 +36,7 @@ for (let i = 0; i < fireNumber; i++) {
 		hold: false,
 		alpha: 1,
 		far: Math.random() * range + (center.y - range),
+		base: { x: 0, y: 0, vx: 0, vy: 0 },
 	};
 	fire.base = {
 		x: fire.x,
@@ -51,7 +56,7 @@ function initSpark() {
 	const direct = ax * 10 * Math.PI;
 	const max = fireNumber * 0.5;
 	for (let i = 0; i < max; i++) {
-		const special = {
+		const special: Special = {
 			x: x,
 			y: Math.random() * range * 0.25 + canvas.height,
 			size: Math.random() + 2,
@@ -61,6 +66,7 @@ function initSpark() {
 			ax: ax,
 			direct: direct,
 			alpha: 1,
+			far: 0,
 		};
 		special.far = far - (special.y - canvas.height);
 		listSpecial.push(special);
@@ -75,7 +81,7 @@ function randColor() {
 	return color;
 }
 
-function pushFirework(fire) {
+function pushFirework(fire: Fire) {
 	const color = randColor();
 	const velocity = Math.random() * 8 + 8;
 	let max = fireNumber * 3;
@@ -91,6 +97,7 @@ function pushFirework(fire) {
 			ay: 0.06,
 			alpha: 1,
 			life: Math.round((Math.random() * range) / 2) + range / 1.5,
+			base: { life: 0, size: 0 },
 		};
 		firework.base = {
 			life: firework.life,
@@ -98,10 +105,12 @@ function pushFirework(fire) {
 		};
 		listFirework.push(firework);
 	}
+
 	max = fireNumber * Math.round(Math.random() * 4 + 4);
+
 	for (let i = 0; i < max; i++) {
 		const rad = (i * Math.PI * 2) / max;
-		const firework = {
+		const firework: Fireworks = {
 			x: fire.x,
 			y: fire.y,
 			size: Math.random() + 1.5,
@@ -111,6 +120,7 @@ function pushFirework(fire) {
 			ay: 0.06,
 			alpha: 1,
 			life: Math.round((Math.random() * range) / 2) + range / 1.5,
+			base: { life: 0, size: 0 },
 		};
 		firework.base = {
 			life: firework.life,
@@ -121,7 +131,7 @@ function pushFirework(fire) {
 	return color;
 }
 
-function makeSpark(special) {
+function makeSpark(special: Special) {
 	const color = special.fill;
 	const velocity = Math.random() * 6 + 12;
 	const max = fireNumber;
@@ -141,6 +151,7 @@ function makeSpark(special) {
 			direct: special.direct,
 			chain: Math.round(Math.random() * 2) + 2,
 			life: Math.round((Math.random() * range) / 2) + range / 2,
+			base: { life: 0, velocity: 0 },
 		};
 		spark.base = {
 			life: spark.life,
@@ -151,7 +162,7 @@ function makeSpark(special) {
 	return color;
 }
 
-function chainSpark(parentSpark) {
+function chainSpark(parentSpark: Spark) {
 	const color = parentSpark.fill;
 	if (parentSpark.chain > 0) {
 		const velocity = parentSpark.base.velocity * 0.6;
@@ -175,6 +186,7 @@ function chainSpark(parentSpark) {
 				direct: parentSpark.direct,
 				chain: parentSpark.chain,
 				life: parentSpark.base.life * 0.8,
+				base: { life: 0, size: 0, velocity: 0 },
 			};
 			spark.base = {
 				life: spark.life,
@@ -190,7 +202,7 @@ function chainSpark(parentSpark) {
 window.onload = function loop() {
 	requestAnimationFrame(loop);
 	update();
-	draw();
+	draw(ctx);
 };
 
 function update() {
@@ -204,6 +216,7 @@ function update() {
 				y: fire.y,
 				color: color,
 				radius: range * 2,
+				alpha: 0,
 			});
 			fire.y = fire.base.y;
 			fire.x = fire.base.x;
@@ -300,7 +313,7 @@ function update() {
 	}
 }
 
-function draw() {
+function draw(ctx: CanvasRenderingContext2D) {
 	ctx.globalAlpha = 0.2;
 	ctx.fillStyle = "black";
 	ctx.fillRect(0, 0, canvas.width, canvas.height);
@@ -359,6 +372,9 @@ function draw() {
 
 	while (lights.length) {
 		const light = lights.pop();
+		if (light === undefined) {
+			throw "Error occurred";
+		}
 		const gradient = ctx.createRadialGradient(
 			light.x,
 			light.y,
@@ -378,6 +394,18 @@ function draw() {
 			light.y - light.radius,
 			light.radius * 2,
 			light.radius * 2,
+		);
+	}
+
+	for (let i = 0; i < listText.length; i++) {
+		const text = listText[i];
+		ctx.globalAlpha = text.alpha;
+		ctx.fillStyle = text.fill;
+		ctx.fillRect(
+			text.x - text.size,
+			text.y - text.size,
+			text.size * 2,
+			text.size * 2,
 		);
 	}
 }
