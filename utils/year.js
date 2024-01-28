@@ -32,11 +32,12 @@ export function dayOfYear() {
 	return dayOfYear;
 }
 
+/** Get year progress */
 export function getYearProgress() {
 	const date = new Date();
 	const currentYear = date.getUTCFullYear();
 	const day = dayOfYear();
 	const numOfDays = daysInYear(currentYear);
 
-	return `${((day / numOfDays) * 100).toFixed(2)}%`;
+	return (day / numOfDays) * 100;
 }
