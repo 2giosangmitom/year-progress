@@ -73,11 +73,3 @@ export interface Light {
 	color: string;
 	alpha: number;
 }
-
-export interface Text {
-	alpha: number;
-	fill: string;
-	x: number;
-	y: number;
-	size: number;
-}

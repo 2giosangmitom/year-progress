@@ -1,5 +1,5 @@
 import "./style.css";
-import type { Text, Fire, Fireworks, Light, Spark, Special } from "../types";
+import type { Fire, Fireworks, Light, Spark, Special } from "../types";
 
 const canvas = document.getElementById("canvas") as HTMLCanvasElement;
 canvas.width = window.innerWidth;
@@ -12,7 +12,6 @@ if (!ctx) {
 const listFire: Fire[] = [];
 const listFirework: Fireworks[] = [];
 const listSpecial: Special[] = [];
-const listText: Text[] = [];
 const listSpark: Spark[] = [];
 const lights: Light[] = [];
 const fireNumber = 10;
@@ -394,18 +393,6 @@ function draw(ctx: CanvasRenderingContext2D) {
 			light.y - light.radius,
 			light.radius * 2,
 			light.radius * 2,
-		);
-	}
-
-	for (let i = 0; i < listText.length; i++) {
-		const text = listText[i];
-		ctx.globalAlpha = text.alpha;
-		ctx.fillStyle = text.fill;
-		ctx.fillRect(
-			text.x - text.size,
-			text.y - text.size,
-			text.size * 2,
-			text.size * 2,
 		);
 	}
 }
