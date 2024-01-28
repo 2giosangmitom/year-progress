@@ -1,3 +1,5 @@
+import { getDayProgress } from "./day";
+
 /**
  * Check leap year
  *
@@ -35,9 +37,11 @@ export function dayOfYear() {
 /** Get year progress */
 export function getYearProgress() {
 	const date = new Date();
-	const currentYear = date.getUTCFullYear();
-	const day = dayOfYear();
+	const currentYear = date.getFullYear();
+	const currentDay = dayOfYear();
 	const numOfDays = daysInYear(currentYear);
+	const progressPercentage =
+		((currentDay + getDayProgress() / 100) / numOfDays) * 100;
 
-	return (day / numOfDays) * 100;
+	return progressPercentage;
 }
