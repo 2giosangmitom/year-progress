@@ -1,7 +1,7 @@
-import { Inter } from "next/font/google";
+import { Fira_Code } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+const font = Fira_Code({ weight: "600" });
 
 export const metadata = {
 	title: "Year progress",
@@ -11,7 +11,18 @@ export const metadata = {
 export default function RootLayout({ children }) {
 	return (
 		<html lang="en">
-			<body className={inter.className}>{children}</body>
+			<body
+				className={[
+					font.className,
+					"xl:px-20",
+					"lg:px-16",
+					"md:px-10",
+					"sm:px-5",
+					"px-4 bg-zinc-300",
+				].join(" ")}
+			>
+				{children}
+			</body>
 		</html>
 	);
 }

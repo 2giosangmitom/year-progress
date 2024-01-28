@@ -21,11 +21,11 @@ export default function DayProgress() {
 	}, [animate]);
 
 	return (
-		<div>
-			<p>Day progress: {progress.toFixed(5)}%</p>
-			<div className="bg-black w-full h-2">
+		<div className="xl:my-0 my-5">
+			<p className="mb-2">Day progress: {progress.toFixed(5)}%</p>
+			<div className="border border-black shadow-lg w-full h-5">
 				<div
-					className="bg-yellow-700 h-full w-0 duration-1000"
+					className="bg-slate-900 h-full w-0 duration-1000"
 					ref={dayProgressRef}
 				/>
 			</div>
