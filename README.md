@@ -31,9 +31,11 @@ make stop && make remove
 
 All commands are run from the root of the project, from a terminal:
 
-| Command          | Action                                       |
-| :--------------- | :------------------------------------------- |
-| `pnpm install`   | Installs dependencies                        |
-| `pnpm run dev`   | Starts local dev server at `localhost:3000`  |
-| `pnpm run build` | Build your production site                   |
-| `pnpm run start` | Preview your build locally, before deploying |
+| Command             | Action                                              |
+| :------------------ | :-------------------------------------------------- |
+| `pnpm install`      | Installs dependencies                               |
+| `pnpm run dev`      | Starts local dev server at `localhost:3000`         |
+| `pnpm run build`    | Build your production site                          |
+| `pnpm run start`    | Preview your build locally, before deploying        |
+| `pnpm run lint`     | Lint the project with [biome](https://biomejs.dev/) |
+| `pnpm run lint:fix` | Fix the project with [biome](https://biomejs.dev/)  |
