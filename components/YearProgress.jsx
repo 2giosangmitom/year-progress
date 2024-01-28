@@ -3,7 +3,7 @@ import { useEffect, useRef } from "react";
 import { getYearProgress } from "@/utils/year";
 
 export default function YearProgress() {
-	const yearProgressRef = useRef(null);
+	const yearProgressRef = useRef();
 
 	useEffect(() => {
 		yearProgressRef.current.style.width = getYearProgress();
