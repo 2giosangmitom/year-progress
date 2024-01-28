@@ -1,5 +1,5 @@
 {
-  description = "Happy new year!";
+  description = "Year progress";
   inputs = {
     nixpkgs.url = "nixpkgs/nixos-unstable";
   };
