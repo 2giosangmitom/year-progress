@@ -1,5 +1,5 @@
+import { describe, expect, it } from "@jest/globals";
 import { daysInYear } from "../utils/year";
-import { describe, it, expect } from "@jest/globals";
 
 describe("test `daysInYear`", () => {
 	it("days of 2024 to equal 366", () => {
