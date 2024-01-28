@@ -1,5 +1,7 @@
 import YearProgress from "@/components/YearProgress";
 import MonthProgress from "@/components/MonthProgress";
+import HourProgress from "@/components/HourProgress";
+import DayProgress from "@/components/DayProgress";
 
 export default function Home() {
 	const date = new Date();
@@ -17,6 +19,8 @@ export default function Home() {
 			<main>
 				<YearProgress />
 				<MonthProgress />
+				<DayProgress />
+				<HourProgress />
 			</main>
 		</>
 	);

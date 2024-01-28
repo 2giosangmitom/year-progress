@@ -3,7 +3,7 @@ import { getMonthProgress } from "@/utils/month";
 import { useRef, useEffect } from "react";
 
 export default function MonthProgress() {
-	const monthProgressRef = useRef(null);
+	const monthProgressRef = useRef();
 
 	useEffect(() => {
 		monthProgressRef.current.style.width = getMonthProgress();
