@@ -2,6 +2,9 @@ import { getHourProgress } from "./hour";
 
 export function getDayProgress() {
 	const date = new Date();
-	const hours = date.getHours();
-	return ((hours + getHourProgress() / 60) / 24) * 100;
+	const currentHour = date.getHours();
+	const progressPercentage =
+		((currentHour + getHourProgress() / 100) / 24) * 100;
+
+	return progressPercentage;
 }

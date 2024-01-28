@@ -1,7 +1,11 @@
 export function getHourProgress() {
 	const date = new Date();
-	const minutes = date.getMinutes();
-	const seconds = date.getSeconds() / 60;
-	const miliseconds = date.getMilliseconds() / 1000 / 60;
-	return ((minutes + seconds + miliseconds) * 100) / 60;
+	const currentMinute = date.getMinutes();
+	const currentSecond = date.getSeconds();
+	const currentMillisecond = date.getMilliseconds();
+	const totalMinutes =
+		currentMinute + currentSecond / 60 + currentMillisecond / 60000;
+	const progressPercentage = (totalMinutes / 60) * 100;
+
+	return progressPercentage;
 }

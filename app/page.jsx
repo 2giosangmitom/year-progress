@@ -6,7 +6,7 @@ import DayProgress from "@/components/DayProgress";
 export default function Home() {
 	const date = new Date();
 	const month = date.toLocaleString("default", { month: "long" });
-	const year = date.getUTCFullYear();
+	const year = date.getFullYear();
 
 	return (
 		<>

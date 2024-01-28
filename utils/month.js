@@ -6,9 +6,12 @@ export function daysInMonth(year, month) {
 
 export function getMonthProgress() {
 	const date = new Date();
-	const day = date.getUTCDate();
-	const currentYear = date.getUTCFullYear();
-	const currentMonth = date.getUTCMonth() + 1;
+	const currentDay = date.getDate();
+	const currentYear = date.getFullYear();
+	const currentMonth = date.getMonth() + 1;
 	const days = daysInMonth(currentYear, currentMonth);
-	return ((day + getDayProgress() / 24) / days) * 100;
+	const progressPercentage =
+		((currentDay + getDayProgress() / 100) / days) * 100;
+
+	return progressPercentage;
 }
