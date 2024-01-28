@@ -1,3 +1,5 @@
+import { getDayProgress } from "./day";
+
 export function daysInMonth(year, month) {
 	return new Date(year, month, 0).getDate();
 }
@@ -8,6 +10,5 @@ export function getMonthProgress() {
 	const currentYear = date.getUTCFullYear();
 	const currentMonth = date.getUTCMonth() + 1;
 	const days = daysInMonth(currentYear, currentMonth);
-
-	return `${((day / days) * 100).toFixed(2)}%`;
+	return ((day + getDayProgress() / 24) / days) * 100;
 }
