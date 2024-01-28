@@ -1,7 +1,7 @@
 import { Fira_Code } from "next/font/google";
 import "./globals.css";
 
-const font = Fira_Code({ weight: "600" });
+const font = Fira_Code({ subsets: ["latin"], weight: "600" });
 
 export const metadata = {
 	title: "Year progress",
