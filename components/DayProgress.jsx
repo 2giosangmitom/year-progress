@@ -1,6 +1,6 @@
 "use client";
-import { useRef, useEffect, useState } from "react";
 import { getDayProgress } from "@/utils/day";
+import { useEffect, useRef, useState } from "react";
 
 export default function DayProgress() {
 	const dayProgressRef = useRef();

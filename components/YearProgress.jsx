@@ -1,6 +1,6 @@
 "use client";
-import { useEffect, useRef, useState } from "react";
 import { getYearProgress } from "@/utils/year";
+import { useEffect, useRef, useState } from "react";
 
 export default function YearProgress() {
 	const yearProgressRef = useRef();

@@ -1,6 +1,6 @@
 "use client";
 import { getMonthProgress } from "@/utils/month";
-import { useRef, useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 export default function MonthProgress() {
 	const monthProgressRef = useRef();
