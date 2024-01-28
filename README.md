@@ -1,5 +1,7 @@
 # Year progress
 
+![preview](./preview.png)
+
 ## Build Docker image from `Dockerfile`
 
 ### Prerequisite
