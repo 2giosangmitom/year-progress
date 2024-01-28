@@ -1,6 +1,6 @@
 "use client";
-import { useRef, useEffect, useState } from "react";
 import { getHourProgress } from "@/utils/hour";
+import { useEffect, useRef, useState } from "react";
 
 export default function HourProgress() {
 	const hourProgressRef = useRef();
