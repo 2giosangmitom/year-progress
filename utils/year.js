@@ -20,10 +20,11 @@ export function daysInYear(year) {
 	return isLeapYear(year) ? 366 : 365;
 }
 
-/** Get current day of year */
-export function dayOfYear() {
-	const now = new Date();
-	const start = new Date(now.getFullYear(), 0, 0);
+/** Get current day of year
+ * @param {Date} now
+ * @param {Date} start
+ */
+export function dayOfYear(now, start) {
 	const diff =
 		now -
 		start +
@@ -38,7 +39,7 @@ export function dayOfYear() {
 export function getYearProgress() {
 	const date = new Date();
 	const currentYear = date.getFullYear();
-	const currentDay = dayOfYear();
+	const currentDay = dayOfYear(date, new Date(date.getFullYear(), 0, 0));
 	const numOfDays = daysInYear(currentYear);
 	const progressPercentage =
 		((currentDay + getDayProgress() / 100) / numOfDays) * 100;
