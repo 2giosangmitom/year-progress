@@ -7,4 +7,10 @@ describe("test `dayOfYear`", () => {
 		const start = new Date(now.getFullYear(), 0, 0);
 		expect(dayOfYear(now, start)).toBe(5);
 	});
+
+	it("29/Feb is day 60 of 2024", () => {
+		const now = new Date(2024, 1, 29); // 29 - February - 2024
+		const start = new Date(now.getFullYear(), 0, 0);
+		expect(dayOfYear(now, start)).toBe(60);
+	});
 });
