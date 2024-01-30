@@ -12,6 +12,7 @@
 		"ignore": [".next", "node_modules"]
 	},
 	"formatter": {
-		"ignore": [".next", "node_modules"]
+		"ignore": [".next", "node_modules"],
+		"lineWidth": 120
 	}
 }
