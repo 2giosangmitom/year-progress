@@ -10,9 +10,15 @@ export default function Home() {
 	const { yearProgress, monthProgress, dayProgress, hourProgress } = useProgressStore();
 	const dispatch = useDispatch();
 
-	// useEffect(() => {
-	// 	dispatch(update());
-	// }, [dispatch]);
+	useEffect(() => {
+		const updateProgress = setInterval(() => {
+			dispatch(update());
+		}, 100);
+
+		return () => {
+			clearInterval(updateProgress);
+		};
+	}, [dispatch]);
 
 	return (
 		<>

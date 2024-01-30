@@ -1,5 +1,5 @@
-import { describe, expect, it } from "@jest/globals";
 import { isLeapYear } from "@/lib/utils/year";
+import { describe, expect, it } from "@jest/globals";
 
 describe("test `isLeapYear`", () => {
 	it("isLeapYear(2024) must return true", () => {

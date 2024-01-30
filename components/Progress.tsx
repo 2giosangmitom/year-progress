@@ -1,7 +1,5 @@
 "use client";
 import { useEffect, useRef } from "react";
-import { useDispatch } from "react-redux";
-import { update } from "@/lib/slices/progressSlice";
 
 export enum Title {
 	year = "Year progress",
@@ -19,10 +17,8 @@ export default function Progress({
 }) {
 	const progressRef = useRef<HTMLDivElement>(null);
 	const requestRef = useRef<number | null>(null);
-	const dispatch = useDispatch();
 
 	const animate = () => {
-		dispatch(update());
 		requestRef.current = requestAnimationFrame(animate);
 	};
 

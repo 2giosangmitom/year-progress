@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { getHourProgress } from "../utils/hour";
 import { getDayProgress } from "../utils/day";
+import { getHourProgress } from "../utils/hour";
 import { getMonthProgress } from "../utils/month";
 import { getYearProgress } from "../utils/year";
 

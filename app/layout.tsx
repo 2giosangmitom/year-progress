@@ -1,8 +1,8 @@
-import { Fira_Code } from "next/font/google";
-import { Metadata } from "next";
-import "./globals.css";
-import { ReactNode } from "react";
 import Providers from "@/lib/Providers";
+import { Metadata } from "next";
+import { Fira_Code } from "next/font/google";
+import { ReactNode } from "react";
+import "./globals.css";
 
 const font = Fira_Code({ subsets: ["latin"], weight: "600" });
 
