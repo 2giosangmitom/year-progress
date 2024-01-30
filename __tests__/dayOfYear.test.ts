@@ -13,7 +13,7 @@ describe("test `dayOfYear`", () => {
 	});
 
 	it("22/Mar is day 81 of 2022", () => {
-		const now = new Date(2022, 2, 22); // 22 - March - 2024
+		const now = new Date(2022, 2, 22); // 22 - March - 2022
 		expect(dayOfYear(now)).toBe(81);
 	});
 });
