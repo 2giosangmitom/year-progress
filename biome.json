@@ -6,12 +6,13 @@
 	},
 	"linter": {
 		"enabled": true,
-		"ignore": [".next", "node_modules"],
 		"rules": {
 			"recommended": true
-		}
+		},
+		"ignore": [".next", "node_modules"]
 	},
 	"formatter": {
-		"ignore": [".next", "node_modules"]
+		"ignore": [".next", "node_modules"],
+		"lineWidth": 120
 	}
 }
