@@ -1,5 +1,6 @@
-/** @type {import('next').NextConfig} */
+/** @type {import("next").NextConfig} */
 const nextConfig = {
+	optimizeFonts: true,
 	output: "standalone",
 };
 
