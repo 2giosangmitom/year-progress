@@ -16,4 +16,7 @@ stop:
 remove:
 	docker rm $(CONTAINER_NAME)
 
+remove-image:
+	docker image rm $(IMAGE_NAME):$(VERSION)
+
 .SILENT: build run stop remove
