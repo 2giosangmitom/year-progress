@@ -26,7 +26,7 @@ export function getYearProgress() {
 	const currentYear = now.getFullYear();
 	const currentDay = dayOfYear(now);
 	const numOfDays = daysInYear(currentYear);
-	const progressPercentage = ((currentDay + getDayProgress() / 100) / numOfDays) * 100;
+	const progressPercentage = ((currentDay - 1 + getDayProgress() / 100) / numOfDays) * 100;
 
 	return progressPercentage;
 }
