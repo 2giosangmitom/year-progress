@@ -8,7 +8,7 @@ const font = Fira_Code({ subsets: ["latin"], weight: "600" });
 
 export const metadata: Metadata = {
 	title: "Year progress",
-	description: "Year progress, made with Next.js, Tailwind",
+	description: "Year progress, made with Next.js, Redux and Tailwind",
 	metadataBase: new URL("https://pheloiprogress.vercel.app/"),
 };
 
