@@ -1,11 +1,11 @@
 "use client";
 import Header from "@/components/Header";
 import Progress, { Title } from "@/components/Progress";
-import { useState } from "react";
-import { getYearProgress } from "@/lib/utils/year";
-import { getMonthProgress } from "@/lib/utils/month";
 import { getDayProgress } from "@/lib/utils/day";
 import { getHourProgress } from "@/lib/utils/hour";
+import { getMonthProgress } from "@/lib/utils/month";
+import { getYearProgress } from "@/lib/utils/year";
+import { useState } from "react";
 
 export default function Home() {
 	const [yearProgress, setYearProgress] = useState(0);
