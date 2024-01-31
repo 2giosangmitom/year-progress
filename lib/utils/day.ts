@@ -1,5 +1,6 @@
 import { getHourProgress } from "./hour";
 
+/** Get day progress */
 export function getDayProgress() {
 	const date = new Date();
 	const currentHour = date.getHours();
