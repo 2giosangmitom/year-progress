@@ -1,45 +1,32 @@
 "use client";
-import { useEffect, useRef } from "react";
+import { getDayProgress } from "@/lib/utils/day";
+import { useEffect, useRef, useState } from "react";
 
-export enum Title {
-	year = "Year progress",
-	month = "Month progress",
-	day = "Day progress",
-	hour = "Hour progress",
-}
-
-export default function Progress({
-	title,
-	progress,
-}: {
-	title: Title;
-	progress: number;
-}) {
+export default function DayProgress() {
 	const progressRef = useRef<HTMLDivElement>(null);
 	const requestRef = useRef<number | null>(null);
+	const [progress, setProgress] = useState(0);
 
 	const animate = () => {
 		requestRef.current = requestAnimationFrame(animate);
+		setProgress(getDayProgress());
+		if (progressRef.current != null) {
+			progressRef.current.style.width = `${progress}%`;
+		}
 	};
 
 	useEffect(() => {
-		if (!progressRef.current) {
-			throw new Error("Error");
-		}
 		requestRef.current = requestAnimationFrame(animate);
-		progressRef.current.style.width = `${progress}%`;
 		return () => {
-			if (requestRef.current !== null) {
+			if (requestRef.current != null) {
 				cancelAnimationFrame(requestRef.current);
 			}
 		};
-	}, [animate, progress]);
+	}, [animate]);
 
 	return (
 		<div className="xl:my-0 my-5">
-			<p className="mb-2">
-				{title}: {progress.toFixed(5)}%
-			</p>
+			<p className="mb-2">Day progress: {progress.toFixed(5)}%</p>
 			<div className="border border-black shadow-lg w-full h-5">
 				<div className="bg-slate-900 h-full w-0 duration-1000" ref={progressRef} />
 			</div>
