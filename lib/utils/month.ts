@@ -1,16 +1,9 @@
-import { getDayProgress } from "./day";
-
-export function daysInMonth(year: number, month: number) {
-	return new Date(year, month, 0).getDate();
-}
-
+/** Get month progress */
 export function getMonthProgress() {
-	const date = new Date();
-	const currentDay = date.getDate();
-	const currentYear = date.getFullYear();
-	const currentMonth = date.getMonth() + 1;
-	const days = daysInMonth(currentYear, currentMonth);
-	const progressPercentage = ((currentDay + getDayProgress() / 100) / days) * 100;
+	const now = new Date();
+	const currentDay = now.getDate();
+	const lastDayOfMonth = new Date(now.getFullYear(), now.getMonth() + 1, 0).getDate();
+	const progressPercentage = (currentDay / lastDayOfMonth) * 100;
 
 	return progressPercentage;
 }
