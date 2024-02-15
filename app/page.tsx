@@ -6,6 +6,7 @@ import { getHourProgress } from "@/lib/utils/hour";
 import { getMonthProgress } from "@/lib/utils/month";
 import { getYearProgress } from "@/lib/utils/year";
 import { useState } from "react";
+import ToggleTheme from "@/components/ToggleTheme";
 
 export default function Home() {
 	const [yearProgress, setYearProgress] = useState(0);
@@ -34,6 +35,7 @@ export default function Home() {
 					updateProgress={() => setHourProgress(getHourProgress())}
 				/>
 			</main>
+			<ToggleTheme />
 		</>
 	);
 }
