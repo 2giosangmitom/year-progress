@@ -39,8 +39,8 @@ export default function Progress({ title, progress, updateProgress }: props) {
 			<p className="mb-2">
 				{title}: {progress.toFixed(5)}%
 			</p>
-			<div className="border border-black shadow-lg w-full h-5">
-				<div className="bg-slate-900 h-full w-0 duration-1000" ref={progressRef} />
+			<div className="border border-black shadow-lg w-full h-5 dark:border-slate-50">
+				<div className="bg-slate-900 h-full w-0 duration-1000 dark:bg-stone-300" ref={progressRef} />
 			</div>
 		</div>
 	);
