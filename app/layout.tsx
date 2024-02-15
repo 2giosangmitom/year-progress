@@ -1,8 +1,8 @@
+import ThemeContextProvider from "@/context/ThemeContext";
 import { Metadata } from "next";
 import { Fira_Code } from "next/font/google";
 import { ReactNode } from "react";
 import "./globals.css";
-import ThemeContextProvider from "@/context/ThemeContext";
 
 const font = Fira_Code({ subsets: ["latin"], weight: "600" });
 
