@@ -1,11 +1,11 @@
 {
-	"extends": ["config:base"],
-	"packageRules": [
-		{
-			"matchUpdateTypes": ["minor", "patch", "pin", "digest", "lockFileMaintenance", "bump", "pinDigest"],
-			"automerge": true
-		}
-	],
-	"dependencyDashboard": false,
-	"platformAutomerge": true
+  "extends": ["config:base"],
+  "packageRules": [
+    {
+      "matchUpdateTypes": ["minor", "patch", "pin", "digest", "lockFileMaintenance", "bump", "pinDigest"],
+      "automerge": true
+    }
+  ],
+  "dependencyDashboard": false,
+  "platformAutomerge": true
 }

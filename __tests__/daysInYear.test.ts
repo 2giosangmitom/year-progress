@@ -1,12 +1,28 @@
 import { daysInYear } from "@/lib/utils/year";
 import { describe, expect, it } from "@jest/globals";
 
-describe("test `daysInYear`", () => {
-	it("days of 2024 to equal 366", () => {
-		expect(daysInYear(2024)).toEqual(366);
-	});
+describe("daysInYear function", () => {
+  it("returns 366 for the year 2000 (leap year divisible by 400)", () => {
+    expect(daysInYear(2000)).toEqual(366);
+  });
 
-	it("days of 2023 to equal 365", () => {
-		expect(daysInYear(2023)).toEqual(365);
-	});
+  it("returns 365 for the year 1900 (non-leap year divisible by 100 but not by 400)", () => {
+    expect(daysInYear(1900)).toEqual(365);
+  });
+
+  it("returns 365 for the year 2100 (non-leap year not divisible by 400)", () => {
+    expect(daysInYear(2100)).toEqual(365);
+  });
+
+  it("returns 365 for the year 2001 (non-leap year)", () => {
+    expect(daysInYear(2001)).toEqual(365);
+  });
+
+  it("throws an error for negative year values", () => {
+    expect(() => daysInYear(-2022)).toThrowError("Year cannot be negative");
+  });
+
+  it("throws an error for non-integer year values", () => {
+    expect(() => daysInYear(2022.5)).toThrowError("Year must be an integer");
+  });
 });
