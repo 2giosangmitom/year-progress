@@ -1,4 +1,4 @@
-import { useTheme } from "@/context/ThemeContext";
+import { useTheme } from "@/lib/hooks/useTheme";
 import { BsSunFill } from "react-icons/bs";
 import { FaMoon } from "react-icons/fa";
 
