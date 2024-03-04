@@ -1,24 +1,8 @@
 # Year progress
 
-<!--toc:start-->
-
-- [Year progress](#year-progress)
-  - [Build Docker image from `Dockerfile`](#build-docker-image-from-dockerfile)
-    - [Prerequisite](#prerequisite)
-    - [Steps](#steps)
-  - [🧞 Commands](#-commands)
-  <!--toc:end-->
-
 ![preview](./preview.png)
 
-## Build Docker image from `Dockerfile`
-
-### Prerequisite
-
-- Docker
-- make
-
-### Steps
+## Build Docker image
 
 - Build Docker image
 
@@ -42,13 +26,13 @@ make stop && make remove
 
 All commands are run from the root of the project, from a terminal:
 
-| Command           | Action                                                     |
-| :---------------- | :--------------------------------------------------------- |
-| `pnpm install`    | Installs dependencies                                      |
-| `pnpm dev`        | Starts local dev server at `localhost:3000`                |
-| `pnpm build`      | Build your production site                                 |
-| `pnpm start`      | Preview your build locally, before deploying               |
-| `pnpm check`      | Lint the project using [biome](https://biomejs.dev/)       |
-| `pnpm fix`        | Fix the project using [biome](https://biomejs.dev/)        |
-| `pnpm test`       | Run unit test using [Jest](https://jestjs.io/)             |
-| `pnpm test:watch` | Run unit test in dev mode using [Jest](https://jestjs.io/) |
+| Command           | Description                                            |
+| ----------------- | ------------------------------------------------------ |
+| `pnpm install`    | Installs project dependencies                          |
+| `pnpm dev`        | Starts local development server on port 3000           |
+| `pnpm build`      | Builds the production ready website                    |
+| `pnpm start`      | Previews the built website locally                     |
+| `pnpm check`      | Lints the project for code style and formatting issues |
+| `pnpm fix`        | Automatically fixes linting issues if possible         |
+| `pnpm test`       | Runs unit tests using Jest                             |
+| `pnpm test:watch` | Runs unit tests in watch mode for continuous feedback  |
