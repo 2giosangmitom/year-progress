@@ -11,11 +11,15 @@
         packages = with pkgs; [
           nodejs_20
           corepack_20
+          fish
         ];
       in
       {
         devShell = pkgs.mkShell {
           buildInputs = packages;
+          shellHook = ''
+            exec fish
+          '';
         };
         formatter = pkgs.nixpkgs-fmt;
       }
