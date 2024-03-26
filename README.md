@@ -2,37 +2,12 @@
 
 ![preview](./preview.png)
 
-## Build Docker image
+## Development Setup
 
-- Build Docker image
+1. **Prerequisites**
+   - Node.js (version 20 or newer) installed: [https://nodejs.org/en/learn/getting-started/how-to-install-nodejs](https://nodejs.org/en/learn/getting-started/how-to-install-nodejs)
+   - Basic understand of Next.js: [https://nextjs.org/](https://nextjs.org/)
+   - pnpm package manager installed: [https://pnpm.io/installation](https://pnpm.io/installation)
 
-```sh
-make build
-```
-
-- Run Docker image
-
-```sh
-make run
-```
-
-- How to stop and remove the container?
-
-```sh
-make stop && make remove
-```
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command           | Description                                            |
-| ----------------- | ------------------------------------------------------ |
-| `pnpm install`    | Installs project dependencies                          |
-| `pnpm dev`        | Starts local development server on port 3000           |
-| `pnpm build`      | Builds the production ready website                    |
-| `pnpm start`      | Previews the built website locally                     |
-| `pnpm check`      | Lints the project for code style and formatting issues |
-| `pnpm fix`        | Automatically fixes linting issues if possible         |
-| `pnpm test`       | Runs unit tests using Jest                             |
-| `pnpm test:watch` | Runs unit tests in watch mode for continuous feedback  |
+> [!TIP]
+> The project includes the `flake.nix` file for dependency management, enabling developers to leverage nix develop for a convenient development environment setup. You can use `nix develop` to enter development environment with out install prerequisites with [Nix](https://nixos.org/download)
