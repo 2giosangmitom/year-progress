@@ -25,3 +25,29 @@ pnpm install
 ```
 
 4. **Run the development server**
+
+```bash
+pnpm dev
+```
+
+This will start the development server and open the application in your default web browser at `http://localhost:3000`.
+
+## 🧞 Commands
+
+All commands are run from the root of the project, from a terminal:
+
+| Command           | Description                                            |
+| ----------------- | ------------------------------------------------------ |
+| `pnpm install`    | Installs project dependencies                          |
+| `pnpm dev`        | Starts local development server on port 3000           |
+| `pnpm build`      | Builds the production ready website                    |
+| `pnpm start`      | Previews the built website locally                     |
+| `pnpm check`      | Lints the project for code style and formatting issues |
+| `pnpm fix`        | Automatically fixes linting issues if possible         |
+| `pnpm test`       | Runs unit tests using Jest                             |
+| `pnpm test:watch` | Runs unit tests in watch mode for continuous feedback  |
+| `make build`      | Build Docker image                                     |
+| `make run`        | Run application with Docker                            |
+| `make stop`       | Stop Docker container                                  |
+| `make remove`     | Remove Docker container                                |
+| `nix develop`     | Enter development environment                          |
