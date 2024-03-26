@@ -11,3 +11,17 @@
 
 > [!TIP]
 > The project includes the `flake.nix` file for dependency management, enabling developers to leverage nix develop for a convenient development environment setup. You can use `nix develop` to enter development environment with out install prerequisites with [Nix](https://nixos.org/download)
+
+2. **Clone the repository**
+
+```bash
+git clone https://github.com/2giosangmitom/year-progress.git
+```
+
+3. **Install dependencies**
+
+```bash
+pnpm install
+```
+
+4. **Run the development server**
