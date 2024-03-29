@@ -1,6 +1,6 @@
 # Year progress
 
-![preview](./preview.png)
+![preview](./app/opengraph-image.png)
 
 ## Development Setup
 
