@@ -8,3 +8,9 @@ docker
 .git
 Makefile
 .swc
+__tests__
+.github
+.gitignore
+biome.json
+flake.*
+jest.config.ts
