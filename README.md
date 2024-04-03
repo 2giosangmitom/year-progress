@@ -46,8 +46,4 @@ All commands are run from the root of the project, from a terminal:
 | `pnpm fix`        | Automatically fixes linting issues if possible         |
 | `pnpm test`       | Runs unit tests using Jest                             |
 | `pnpm test:watch` | Runs unit tests in watch mode for continuous feedback  |
-| `make build`      | Build Docker image                                     |
-| `make run`        | Run application with Docker                            |
-| `make stop`       | Stop Docker container                                  |
-| `make remove`     | Remove Docker container                                |
 | `nix develop`     | Enter development environment                          |
