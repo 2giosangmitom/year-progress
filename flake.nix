@@ -14,7 +14,7 @@
       system: let
         pkgs = nixpkgs.legacyPackages.${system};
         packages = with pkgs; [
-          nodejs_20
+          nodejs_21
           nodePackages.pnpm
           fish
           statix

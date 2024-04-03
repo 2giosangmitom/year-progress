@@ -1,7 +1,7 @@
 /** @type {import("next").NextConfig} */
 const nextConfig = {
   optimizeFonts: true,
-  output: "standalone",
+  output: "export",
 };
 
 export default nextConfig;
