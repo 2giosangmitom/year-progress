@@ -23,7 +23,7 @@
           nil
         ];
       in {
-        devShell = pkgs.mkShell {
+        devShells.default = pkgs.mkShell {
           buildInputs = packages;
           shellHook = ''
             exec fish
