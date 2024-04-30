@@ -14,20 +14,14 @@
       system: let
         pkgs = nixpkgs.legacyPackages.${system};
         packages = with pkgs; [
-          nodejs_21
+          nodejs_20
           nodePackages.pnpm
-          fish
-          statix
           alejandra
-          deadnix
           nil
         ];
       in {
         devShells.default = pkgs.mkShell {
           buildInputs = packages;
-          shellHook = ''
-            exec fish
-          '';
         };
         formatter = pkgs.alejandra;
       }
