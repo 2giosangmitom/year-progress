@@ -21,27 +21,13 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Setup pnpm
-        uses: pnpm/action-setup@v3
-        with:
-          version: 8
-
-      - name: Setup Node
-        uses: actions/setup-node@v4
-        with:
-          node-version: "21"
-          cache: "pnpm"
-
       - name: Setup Pages
         uses: actions/configure-pages@v5
         with:
           static_site_generator: next
 
-      - name: Install dependencies
-        run: pnpm install
-
-      - name: Build with Next.js
-        run: pnpm build
+      - name: Build
+        run: docker build -o out .
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
