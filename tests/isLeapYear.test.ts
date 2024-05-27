@@ -2,31 +2,28 @@ import { isLeapYear } from "~/lib/utils/year";
 import { describe, expect, it } from "vitest";
 
 describe("isLeapYear function", () => {
-  it("returns true for leap years divisible by 4 but not by 100 (e.g., 2004)", () => {
-    expect(isLeapYear(2004)).toBeTruthy();
+  const testCases = [
+    { year: 2004, expected: true, description: "leap years divisible by 4 but not by 100 (e.g., 2004)" },
+    { year: 2000, expected: true, description: "leap years divisible by 400 (e.g., 2000)" },
+    { year: 2023, expected: false, description: "years not divisible by 4 (e.g., 2023)" },
+    { year: 1900, expected: false, description: "years divisible by 100 but not by 400 (e.g., 1900)" },
+    { year: 2022, expected: false, description: "non-leap years divisible by 4 (e.g., 2022)" },
+  ];
+
+  testCases.forEach(({ year, expected, description }) => {
+    it(`returns ${expected} for ${description}`, () => {
+      expect(isLeapYear(year)).toBe(expected);
+    });
   });
 
-  it("returns true for leap years divisible by 400 (e.g., 2000)", () => {
-    expect(isLeapYear(2000)).toBeTruthy();
-  });
+  const errorTestCases = [
+    { year: -2022, errorMessage: "Year cannot be negative", description: "negative year values" },
+    { year: 2022.5, errorMessage: "Year must be an integer", description: "non-integer year values" },
+  ];
 
-  it("returns false for years not divisible by 4 (e.g., 2023)", () => {
-    expect(isLeapYear(2023)).toBeFalsy();
-  });
-
-  it("returns false for years divisible by 100 but not by 400 (e.g., 1900)", () => {
-    expect(isLeapYear(1900)).toBeFalsy();
-  });
-
-  it("returns false for non-leap years divisible by 4 (e.g., 2022)", () => {
-    expect(isLeapYear(2022)).toBeFalsy();
-  });
-
-  it("throws an error for negative year values", () => {
-    expect(() => isLeapYear(-2022)).toThrowError("Year cannot be negative");
-  });
-
-  it("throws an error for non-integer year values", () => {
-    expect(() => isLeapYear(2022.5)).toThrowError("Year must be an integer");
+  errorTestCases.forEach(({ year, errorMessage, description }) => {
+    it(`throws an error for ${description}`, () => {
+      expect(() => isLeapYear(year)).toThrowError(errorMessage);
+    });
   });
 });
