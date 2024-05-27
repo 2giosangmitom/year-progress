@@ -2,27 +2,28 @@ import { daysInYear } from "~/lib/utils/year";
 import { describe, expect, it } from "vitest";
 
 describe("daysInYear function", () => {
-  it("returns 366 for the year 2000 (leap year divisible by 400)", () => {
-    expect(daysInYear(2000)).toEqual(366);
+  const testCases = [
+    { year: 2000, expected: 366, description: "the year 2000 (leap year divisible by 400)" },
+    { year: 1900, expected: 365, description: "the year 1900 (non-leap year divisible by 100 but not by 400)" },
+    { year: 2100, expected: 365, description: "the year 2100 (non-leap year not divisible by 400)" },
+    { year: 2001, expected: 365, description: "the year 2001 (non-leap year)" }
+  ];
+
+  testCases.forEach(({ year, expected, description }) => {
+    it(`returns ${expected} for ${description}`, () => {
+      expect(daysInYear(year)).toEqual(expected);
+    });
   });
 
-  it("returns 365 for the year 1900 (non-leap year divisible by 100 but not by 400)", () => {
-    expect(daysInYear(1900)).toEqual(365);
-  });
+  const errorTestCases = [
+    { year: -2022, errorMessage: "Year cannot be negative", description: "negative year values" },
+    { year: 2022.5, errorMessage: "Year must be an integer", description: "non-integer year values" }
+  ];
 
-  it("returns 365 for the year 2100 (non-leap year not divisible by 400)", () => {
-    expect(daysInYear(2100)).toEqual(365);
-  });
-
-  it("returns 365 for the year 2001 (non-leap year)", () => {
-    expect(daysInYear(2001)).toEqual(365);
-  });
-
-  it("throws an error for negative year values", () => {
-    expect(() => daysInYear(-2022)).toThrowError("Year cannot be negative");
-  });
-
-  it("throws an error for non-integer year values", () => {
-    expect(() => daysInYear(2022.5)).toThrowError("Year must be an integer");
+  errorTestCases.forEach(({ year, errorMessage, description }) => {
+    it(`throws an error for ${description}`, () => {
+      expect(() => daysInYear(year)).toThrowError(errorMessage);
+    });
   });
 });
+
