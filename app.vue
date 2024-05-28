@@ -11,15 +11,30 @@ useHead({
 });
 
 const progress = useProgressStore();
+
+onMounted(() => {
+  const intervalId = setInterval(() => {
+    progress.update();
+  });
+  onUnmounted(() => {
+    clearInterval(intervalId);
+  });
+});
 </script>
 
 <template>
+  <Header />
   <main class="xl:grid xl:grid-cols-2 gap-4 mt-5">
-    <Header />
-    <Progress title="Year" :progress="progress.year" :update="progress.updateYear" />
-    <Progress title="Month" :progress="progress.month" :update="progress.updateMonth" />
-    <Progress title="Day" :progress="progress.day" :update="progress.updateDay" />
-    <Progress title="Hour" :progress="progress.hour" :update="progress.updateHour" />
-    <ToggleTheme />
+    <Progress title="Year" :progress="progress.year" />
+    <Progress title="Month" :progress="progress.month" />
+    <Progress title="Day" :progress="progress.day" />
+    <Progress title="Hour" :progress="progress.hour" />
   </main>
+  <ToggleTheme />
 </template>
+
+<style>
+* {
+  font-family: "Fira Code";
+}
+</style>

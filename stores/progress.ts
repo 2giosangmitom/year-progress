@@ -11,16 +11,10 @@ export const useProgressStore = defineStore("progress", {
     hour: 0,
   }),
   actions: {
-    updateYear() {
+    update() {
       this.year = getYearProgress();
-    },
-    updateMonth() {
       this.month = getMonthProgress();
-    },
-    updateDay() {
       this.day = getDayProgress();
-    },
-    updateHour() {
       this.hour = getHourProgress();
     },
   },
