@@ -1,7 +1,12 @@
+.nuxt
+.output
+coverage
+node_modules
 Dockerfile
 .dockerignore
-node_modules
-README.md
-.next
+.gitignore
 .git
-Makefile
+README.md
+.prettierrc
+.prettierignore
+dist

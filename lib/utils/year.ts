@@ -49,5 +49,5 @@ export function getYearProgress(): number {
   const currentYear = now.getFullYear();
   const currentDay = dayOfYear(now);
   const numOfDays = daysInYear(currentYear);
-  return ((currentDay + 1) / numOfDays) * 100; // Add 1 to currentDay to consider day 0 as 1st January
+  return ((currentDay + 1) / numOfDays) * 100;
 }

@@ -1,49 +1,90 @@
-# Year progress
+# Year Progress 🎉
 
-![preview](./app/opengraph-image.png)
+[![Codecov](https://codecov.io/gh/2giosangmitom/year-progress/graph/badge.svg?token=ZEV3SVGNJF)](https://codecov.io/gh/2giosangmitom/year-progress)
+[![Tests](https://github.com/2giosangmitom/year-progress/actions/workflows/test.yml/badge.svg)](https://github.com/2giosangmitom/year-progress/actions/workflows/test.yml)
+[![Deploy Nuxt.js site to Pages](https://github.com/2giosangmitom/year-progress/actions/workflows/deploy.yml/badge.svg)](https://github.com/2giosangmitom/year-progress/actions/workflows/deploy.yml)
 
-## Development Setup
+[Year Progress](https://2giosangmitom.is-a.dev/year-progress/) is a web application that provides a visual representation of the progress of the current year. It helps users see how far they are into the year, month, day, and even the current hour at a glance. This project is built using Nuxt.js, with Tailwind CSS for styling, Vitest for testing, Pinia for state management, and TypeScript for type safety.
 
-1. **Prerequisites**
-   - Node.js (version 20 or newer) installed: [https://nodejs.org/en/learn/getting-started/how-to-install-nodejs](https://nodejs.org/en/learn/getting-started/how-to-install-nodejs)
-   - Basic understand of Next.js: [https://nextjs.org/](https://nextjs.org/)
-   - pnpm package manager installed: [https://pnpm.io/installation](https://pnpm.io/installation)
+## Features ✨
+
+- **Visual Progress Bars**:
+  - **Year Progress**: Dynamic progress bar showing the percentage of the year that has passed. 🏔️
+  - **Month Progress**: Displays how far along the current month is. 🐻‍❄️
+  - **Day Progress**: Indicates the progress of the current day. 🐼
+  - **Hour Progress**: Shows the current hour's progress. 🐶
+- **Responsive Design**: Compatible with various screen sizes and devices. 📱💻
+- **Theme Toggle**: Easily switch between dark and light themes. 🌙☀️
+
+## Technologies Used 🛠️
+
+- **Nuxt.js**: Progressive framework based on Vue.js for building modern web applications.
+- **Vue.js**: Versatile JavaScript framework for building user interfaces.
+- **Tailwind CSS**: Utility-first CSS framework for styling the application.
+- **TypeScript**: Strongly typed programming language that builds on JavaScript.
+- **Vitest**: Vite-native unit testing framework.
+- **Pinia**: State management library for Vue.js applications.
+
+## Getting Started 🚀
+
+### Prerequisites 📋
+
+Ensure you have the following installed on your local development environment:
+
+- Node.js (version 20) 🌐
+- pnpm 📦
 
 > [!TIP]
-> The project includes the `flake.nix` file for dependency management, enabling developers to leverage nix develop for a convenient development environment setup. You can use `nix develop` to enter development environment with out install prerequisites with [Nix](https://nixos.org/download)
+> The project includes a `flake.nix` file for dependency management, enabling developers to leverage `nix develop` for a convenient development environment setup. You can use `nix develop` to enter the development environment without installing prerequisites manually with [Nix](https://nixos.org/download). ❄️
 
-2. **Clone the repository**
+### Installation ⚙️
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/2giosangmitom/year-progress.git
+   cd year-progress
+   ```
+
+2. Install the dependencies using `pnpm`:
+
+   ```bash
+   pnpm install
+   ```
+
+### Running the Development Server ▶️
+
+Start the development server and open the application in your browser:
 
 ```bash
-git clone https://github.com/2giosangmitom/year-progress.git
+pnpm run dev
 ```
 
-3. **Install dependencies**
+The application will be available at `http://localhost:3000`. 🌐
+
+### Building for Production 🏗️
+
+To build the application for production, run:
 
 ```bash
-pnpm install
+pnpm run build
+pnpm run preview
 ```
 
-4. **Run the development server**
+The application will be available at `http://localhost:3000`. 🌐
+
+### Testing ✅
+
+To run the tests with Vitest, use:
 
 ```bash
-pnpm dev
+pnpm run test
 ```
 
-This will start the development server and open the application in your default web browser at `http://localhost:3000`.
+### Deployment 🌍
 
-## 🧞 Commands
+You can deploy the built application to any static hosting service, such as Vercel, Netlify, or GitHub Pages. Follow the specific deployment instructions provided by the hosting service.
 
-All commands are run from the root of the project, from a terminal:
+---
 
-| Command           | Description                                            |
-| ----------------- | ------------------------------------------------------ |
-| `pnpm install`    | Installs project dependencies                          |
-| `pnpm dev`        | Starts local development server on port 3000           |
-| `pnpm build`      | Builds the production ready website                    |
-| `pnpm start`      | Previews the built website locally                     |
-| `pnpm check`      | Lints the project for code style and formatting issues |
-| `pnpm fix`        | Automatically fixes linting issues if possible         |
-| `pnpm test`       | Runs unit tests using Jest                             |
-| `pnpm test:watch` | Runs unit tests in watch mode for continuous feedback  |
-| `nix develop`     | Enter development environment                          |
+Thank you for using Year Progress! We hope it helps you keep track of your year, month, day, and hour effectively. 😊
