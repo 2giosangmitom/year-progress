@@ -1,0 +1,12 @@
+.nuxt
+.output
+coverage
+node_modules
+Dockerfile
+.dockerignore
+.gitignore
+.git
+README.md
+.prettierrc
+.prettierignore
+dist
