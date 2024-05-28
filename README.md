@@ -1,75 +1,86 @@
-# Nuxt 3 Minimal Starter
+# Year Progress 🎉
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+[Year Progress](https://2giosangmitom.is-a.dev/year-progress/) is a web application that provides a visual representation of the progress of the current year. It helps users see how far they are into the year, month, day, and even the current hour at a glance. This project is built using Nuxt.js, with Tailwind CSS for styling, Vitest for testing, Pinia for state management, and TypeScript for type safety.
 
-## Setup
+## Features ✨
 
-Make sure to install the dependencies:
+- **Visual Progress Bars**:
+  - **Year Progress**: Dynamic progress bar showing the percentage of the year that has passed. 🏔️
+  - **Month Progress**: Displays how far along the current month is. 🐻‍❄️
+  - **Day Progress**: Indicates the progress of the current day. 🐼
+  - **Hour Progress**: Shows the current hour's progress. 🐶
+- **Daily Updates**: Progress bars update automatically every day. 🔄
+- **Responsive Design**: Compatible with various screen sizes and devices. 📱💻
+- **Theme Toggle**: Easily switch between dark and light themes. 🌙☀️
+
+## Technologies Used 🛠️
+
+- **Nuxt.js**: Progressive framework based on Vue.js for building modern web applications.
+- **Vue.js**: Versatile JavaScript framework for building user interfaces.
+- **Tailwind CSS**: Utility-first CSS framework for styling the application.
+- **TypeScript**: Strongly typed programming language that builds on JavaScript.
+- **Vitest**: Vite-native unit testing framework.
+- **Pinia**: State management library for Vue.js applications.
+
+## Getting Started 🚀
+
+### Prerequisites 📋
+
+Ensure you have the following installed on your local development environment:
+
+- Node.js (version 20) 🌐
+- pnpm 📦
+
+> **Tip**: The project includes a `flake.nix` file for dependency management, enabling developers to leverage `nix develop` for a convenient development environment setup. You can use `nix develop` to enter the development environment without installing prerequisites manually with [Nix](https://nixos.org/download). ❄️
+
+### Installation ⚙️
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/2giosangmitom/year-progress.git
+   cd year-progress
+   ```
+
+2. Install the dependencies using `pnpm`:
+
+   ```bash
+   pnpm install
+   ```
+
+### Running the Development Server ▶️
+
+Start the development server and open the application in your browser:
 
 ```bash
-# npm
-npm install
-
-# pnpm
-pnpm install
-
-# yarn
-yarn install
-
-# bun
-bun install
-```
-
-## Development Server
-
-Start the development server on `http://localhost:3000`:
-
-```bash
-# npm
-npm run dev
-
-# pnpm
 pnpm run dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
 ```
 
-## Production
+The application will be available at `http://localhost:3000`. 🌐
 
-Build the application for production:
+### Building for Production 🏗️
+
+To build the application for production, run:
 
 ```bash
-# npm
-npm run build
-
-# pnpm
 pnpm run build
-
-# yarn
-yarn build
-
-# bun
-bun run build
+pnpm run preview
 ```
 
-Locally preview production build:
+The application will be available at `http://localhost:3000`. 🌐
+
+### Testing ✅
+
+To run the tests with Vitest, use:
 
 ```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm run preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
+pnpm run test
 ```
 
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+### Deployment 🌍
+
+You can deploy the built application to any static hosting service, such as Vercel, Netlify, or GitHub Pages. Follow the specific deployment instructions provided by the hosting service.
+
+---
+
+Thank you for using Year Progress! We hope it helps you keep track of your year, month, day, and hour effectively. 😊

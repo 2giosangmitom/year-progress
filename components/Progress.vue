@@ -16,6 +16,7 @@ const props = defineProps<{
       :aria-valuenow="props.progress"
       aria-valuemin="0"
       aria-valuemax="100"
+      :aria-label="`${props.title} progress`"
     >
       <div class="bg-slate-900 h-full w-0 duration-1000 dark:bg-stone-300" :style="{ width: `${props.progress}%` }" />
     </div>
