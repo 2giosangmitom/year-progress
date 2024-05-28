@@ -60,7 +60,7 @@ Start the development server and open the application in your browser:
 pnpm run dev
 ```
 
-The application will be available at `http://localhost:3000`. 🌐
+The application will be available at `http://localhost:3000/year-progress`. 🌐
 
 ### Building for Production 🏗️
 
@@ -71,7 +71,7 @@ pnpm run build
 pnpm run preview
 ```
 
-The application will be available at `http://localhost:3000`. 🌐
+The application will be available at `http://localhost:3000/year-progress`. 🌐
 
 ### Testing ✅
 
@@ -84,6 +84,8 @@ pnpm run test
 ### Deployment 🌍
 
 You can deploy the built application to any static hosting service, such as Vercel, Netlify, or GitHub Pages. Follow the specific deployment instructions provided by the hosting service.
+
+- Official document: [https://nuxt.com/deploy](https://nuxt.com/deploy)
 
 ---
 
