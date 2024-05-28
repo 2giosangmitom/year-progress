@@ -13,7 +13,6 @@
   - **Month Progress**: Displays how far along the current month is. 🐻‍❄️
   - **Day Progress**: Indicates the progress of the current day. 🐼
   - **Hour Progress**: Shows the current hour's progress. 🐶
-- **Daily Updates**: Progress bars update automatically every day. 🔄
 - **Responsive Design**: Compatible with various screen sizes and devices. 📱💻
 - **Theme Toggle**: Easily switch between dark and light themes. 🌙☀️
 
