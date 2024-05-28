@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import { type Title } from "~/lib/types";
+type Title = "Year" | "Month" | "Day" | "Hour";
+
 defineProps<{
   title: Title;
-  progress: number;
-  update: void;
+  progress: number; update: void;
 }>();
 </script>
 
