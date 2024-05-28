@@ -1,5 +1,18 @@
 <script setup lang="ts">
 const themeStore = useThemeStore();
+
+onMounted(() => {
+  const localTheme = window.localStorage.getItem("theme");
+  if (localTheme) {
+    themeStore.theme = localTheme;
+    if (localTheme === "dark") {
+      document.documentElement.classList.add("dark");
+    }
+  } else if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+    themeStore.theme = "dark";
+    document.documentElement.classList.add("dark");
+  }
+});
 </script>
 
 <template>
