@@ -35,8 +35,9 @@ onMounted(() => {
     <Progress title="Month" :progress="progress.month" />
     <Progress title="Day" :progress="progress.day" />
     <Progress title="Hour" :progress="progress.hour" />
+    <ToggleTheme />
   </main>
-  <ToggleTheme />
+  <Footer />
 </template>
 
 <style>
