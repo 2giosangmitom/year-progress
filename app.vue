@@ -1,10 +1,13 @@
 <script setup lang="ts">
-useSeoMeta({
-  title: "Year progress",
-  description: "A website for tracking the progress of the current year visually",
-});
-
 useHead({
+  title: "Year progress",
+  meta: [
+    {
+      name: "description",
+      content: "A website for tracking the progress of the current year visually",
+    },
+  ],
+  link: [{ rel: "icon", type: "image/png", href: "favicon.ico" }],
   bodyAttrs: {
     class: "xl:px-20 lg:px-16 md:px-10 sm:px-5 px-4 bg-zinc-300 dark:bg-stone-950 dark:text-slate-50 transition",
   },
@@ -18,7 +21,7 @@ const progress = useProgressStore();
 onMounted(() => {
   const intervalId = setInterval(() => {
     progress.update();
-  });
+  }, 0);
   onUnmounted(() => {
     clearInterval(intervalId);
   });
