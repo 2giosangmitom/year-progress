@@ -9,7 +9,8 @@ useHead({
   ],
   link: [{ rel: "icon", type: "image/png", href: "favicon.ico" }],
   bodyAttrs: {
-    class: "xl:px-20 lg:px-16 md:px-10 sm:px-5 px-4 bg-zinc-300 dark:bg-stone-950 dark:text-slate-50 transition",
+    class:
+      "bg-gradient-to-r from-zinc-300 via-zinc-400 to-zinc-500 dark:bg-gradient-to-r dark:from-stone-950 dark:via-stone-900 dark:to-stone-800 dark:text-slate-50 duration-500",
   },
   htmlAttrs: {
     lang: "en",
@@ -30,7 +31,7 @@ onMounted(() => {
 
 <template>
   <Header />
-  <main class="xl:grid xl:grid-cols-2 gap-4 mt-5">
+  <main class="xl:grid xl:grid-cols-2 gap-4 mt-5 xl:px-20 lg:px-16 md:px-10 sm:px-5 px-4">
     <Progress title="Year" :progress="progress.year" />
     <Progress title="Month" :progress="progress.month" />
     <Progress title="Day" :progress="progress.day" />
