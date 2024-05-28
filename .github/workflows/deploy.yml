@@ -1,4 +1,4 @@
-name: Deploy Next.js site to Pages
+name: Deploy Nuxt.js site
 
 on:
   push:
@@ -24,15 +24,15 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v5
         with:
-          static_site_generator: next
+          static_site_generator: nuxt
 
       - name: Build
-        run: docker build -o out .
+        run: docker build -o dist .
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./out
+          path: ./dist
 
   deploy:
     environment:
