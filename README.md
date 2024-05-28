@@ -1,5 +1,9 @@
 # Year Progress 🎉
 
+[![Codecov](https://codecov.io/gh/2giosangmitom/year-progress/graph/badge.svg?token=ZEV3SVGNJF)](https://codecov.io/gh/2giosangmitom/year-progress)
+[![Tests](https://github.com/2giosangmitom/year-progress/actions/workflows/test.yml/badge.svg)](https://github.com/2giosangmitom/year-progress/actions/workflows/test.yml)
+[![Deploy Nuxt.js site to Pages](https://github.com/2giosangmitom/year-progress/actions/workflows/deploy.yml/badge.svg)](https://github.com/2giosangmitom/year-progress/actions/workflows/deploy.yml)
+
 [Year Progress](https://2giosangmitom.is-a.dev/year-progress/) is a web application that provides a visual representation of the progress of the current year. It helps users see how far they are into the year, month, day, and even the current hour at a glance. This project is built using Nuxt.js, with Tailwind CSS for styling, Vitest for testing, Pinia for state management, and TypeScript for type safety.
 
 ## Features ✨
@@ -31,7 +35,8 @@ Ensure you have the following installed on your local development environment:
 - Node.js (version 20) 🌐
 - pnpm 📦
 
-> **Tip**: The project includes a `flake.nix` file for dependency management, enabling developers to leverage `nix develop` for a convenient development environment setup. You can use `nix develop` to enter the development environment without installing prerequisites manually with [Nix](https://nixos.org/download). ❄️
+> [!TIP]
+> The project includes a `flake.nix` file for dependency management, enabling developers to leverage `nix develop` for a convenient development environment setup. You can use `nix develop` to enter the development environment without installing prerequisites manually with [Nix](https://nixos.org/download). ❄️
 
 ### Installation ⚙️
 
