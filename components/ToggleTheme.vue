@@ -17,10 +17,10 @@ onMounted(() => {
 
 <template>
   <button
-    @click="themeStore.toggle"
     type="button"
     aria-label="Toggle Theme"
     class="fixed sm:bottom-10 sm:right-10 text-2xl outline-none bg-slate-100 rounded-full sm:p-5 active:scale-[0.9] duration-300 shadow-sm dark:text-slate-50 dark:bg-slate-900 p-3 bottom-5 right-5"
+    @click="themeStore.toggle"
   >
     <svg v-show="themeStore.theme === 'dark'" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
       <path

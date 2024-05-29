@@ -30,12 +30,12 @@ onMounted(() => {
 </script>
 
 <template>
-  <Header />
+  <TheHeader />
   <main class="xl:grid xl:grid-cols-2 gap-4 mt-5 xl:px-20 lg:px-16 md:px-10 sm:px-5 px-4">
-    <Progress title="Year" :progress="progress.year" />
-    <Progress title="Month" :progress="progress.month" />
-    <Progress title="Day" :progress="progress.day" />
-    <Progress title="Hour" :progress="progress.hour" />
+    <TheProgress title="Year" :progress="progress.year" />
+    <TheProgress title="Month" :progress="progress.month" />
+    <TheProgress title="Day" :progress="progress.day" />
+    <TheProgress title="Hour" :progress="progress.hour" />
     <ToggleTheme />
   </main>
   <TheFooter />
