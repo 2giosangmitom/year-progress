@@ -1,8 +1,9 @@
 import { setActivePinia, createPinia } from "pinia";
 import { createTestingPinia } from "@pinia/testing";
 import { describe, it, expect, beforeEach, vi } from "vitest";
-import { mount, VueWrapper } from "@vue/test-utils";
-import Progress from "~/components/Progress.vue";
+import type { VueWrapper } from "@vue/test-utils";
+import { mount } from "@vue/test-utils";
+import Progress from "~/components/TheProgress.vue";
 
 describe("Progress Component", () => {
   beforeEach(() => {
@@ -18,7 +19,7 @@ describe("Progress Component", () => {
   });
 
   it("renders correctly with props", () => {
-    const wrapper: VueWrapper<any> = mount(Progress, {
+    const wrapper: VueWrapper = mount(Progress, {
       props: {
         title: "Year",
         progress: 75.12345,

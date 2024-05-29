@@ -3,7 +3,7 @@ import { mount, type VueWrapper } from "@vue/test-utils";
 import Footer from "~/components/TheFooter.vue";
 
 describe("Footer Component", () => {
-  let wrapper: VueWrapper<any>;
+  let wrapper: VueWrapper;
 
   beforeEach(() => {
     wrapper = mount(Footer);
