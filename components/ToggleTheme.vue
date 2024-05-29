@@ -1,22 +1,16 @@
 <script setup lang="ts">
 const themeStore = useThemeStore();
 
-const applyDarkTheme = (isDark: boolean) => {
-  if (isDark) {
-    document.documentElement.classList.add("dark");
-  } else {
-    document.documentElement.classList.remove("dark");
-  }
-};
-
 onMounted(() => {
   const localTheme = window.localStorage.getItem("theme");
   if (localTheme) {
     themeStore.theme = localTheme;
-    applyDarkTheme(localTheme === "dark");
+    if (localTheme === "dark") {
+      document.documentElement.classList.add("dark");
+    }
   } else if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
     themeStore.theme = "dark";
-    applyDarkTheme(true);
+    document.documentElement.classList.add("dark");
   }
 });
 </script>
