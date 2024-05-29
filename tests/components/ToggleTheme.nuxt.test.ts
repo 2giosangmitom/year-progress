@@ -5,7 +5,7 @@ import { useThemeStore } from "@/stores/theme";
 import { describe, it, expect, afterEach, vi, beforeEach } from "vitest";
 import { setActivePinia, createPinia } from "pinia";
 
-describe("ToggleTheme", () => {
+describe("ToggleTheme Component", () => {
   beforeEach(() => {
     setActivePinia(createPinia());
   });
@@ -56,7 +56,7 @@ describe("ToggleTheme", () => {
     expect(document.documentElement.classList.contains("dark")).toBe(true);
   });
 
-  it("toggle correctly", () => {
+  it("correctly toggles between light and dark themes", () => {
     const themeStore = useThemeStore();
     themeStore.toggle();
     expect(themeStore.theme).toBe("dark");

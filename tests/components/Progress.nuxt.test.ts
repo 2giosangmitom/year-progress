@@ -1,24 +1,24 @@
 import { setActivePinia, createPinia } from "pinia";
 import { createTestingPinia } from "@pinia/testing";
 import { describe, it, expect, beforeEach, vi } from "vitest";
-import { mount } from "@vue/test-utils";
+import { mount, VueWrapper } from "@vue/test-utils";
 import Progress from "~/components/Progress.vue";
 
-describe("Progress.vue", () => {
+describe("Progress Component", () => {
   beforeEach(() => {
     setActivePinia(createPinia());
   });
 
   it("initializes store correctly", () => {
-    const progress = useProgressStore();
-    expect(progress.year).toBe(0);
-    expect(progress.month).toBe(0);
-    expect(progress.day).toBe(0);
-    expect(progress.hour).toBe(0);
+    const progressStore = useProgressStore();
+    expect(progressStore.year).toBe(0);
+    expect(progressStore.month).toBe(0);
+    expect(progressStore.day).toBe(0);
+    expect(progressStore.hour).toBe(0);
   });
 
   it("renders correctly with props", () => {
-    const wrapper = mount(Progress, {
+    const wrapper: VueWrapper<any> = mount(Progress, {
       props: {
         title: "Year",
         progress: 75.12345,
