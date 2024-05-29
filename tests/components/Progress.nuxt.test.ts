@@ -44,7 +44,7 @@ describe("Progress.vue", () => {
     const expectedHourProgress = (30 / 60 + 15 / 3600 + 500 / 3600000) * 100;
     const expectedDayProgress = ((12 + expectedHourProgress / 100) / 24) * 100;
     const expectedMonthProgress = (expectedDayProgress / 100 / 31) * 100;
-    const expectedYearProgress = (2 / 365) * 100;
+    const expectedYearProgress = (1 / 365) * 100;
 
     const store = useProgressStore();
     store.update();

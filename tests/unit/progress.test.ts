@@ -72,7 +72,7 @@ describe("Progress Calculation", () => {
 
     const currentDay = utils.dayOfYear(mockDate);
     const totalDays = utils.daysInYear(2023);
-    const expectedYearProgress = ((currentDay + 1) / totalDays) * 100;
+    const expectedYearProgress = (currentDay / totalDays) * 100;
 
     expect(yearProgress).toBeCloseTo(expectedYearProgress, 5);
 
@@ -87,7 +87,7 @@ describe("Progress Calculation", () => {
 
     const currentDay = utils.dayOfYear(mockDate);
     const totalDays = utils.daysInYear(2024);
-    const expectedYearProgress = ((currentDay + 1) / totalDays) * 100;
+    const expectedYearProgress = (currentDay / totalDays) * 100;
 
     expect(yearProgress).toBeCloseTo(expectedYearProgress, 5);
 
@@ -102,7 +102,7 @@ describe("Progress Calculation", () => {
 
     const currentDay = utils.dayOfYear(mockDate);
     const totalDays = utils.daysInYear(2023);
-    const expectedYearProgress = ((currentDay + 1) / totalDays) * 100;
+    const expectedYearProgress = (currentDay / totalDays) * 100;
 
     expect(yearProgress).toBeCloseTo(expectedYearProgress, 5);
 
@@ -117,7 +117,7 @@ describe("Progress Calculation", () => {
 
     const currentDay = utils.dayOfYear(mockDate);
     const totalDays = utils.daysInYear(2023);
-    const expectedYearProgress = ((currentDay + 1) / totalDays) * 100;
+    const expectedYearProgress = (currentDay / totalDays) * 100;
 
     expect(yearProgress).toBeCloseTo(expectedYearProgress, 5);
 
