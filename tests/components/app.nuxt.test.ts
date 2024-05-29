@@ -1,10 +1,10 @@
 import { mount } from "@vue/test-utils";
-import { describe, it, expect, beforeEach, vi, afterEach } from "vitest";
+import { describe, it, expect, beforeEach, afterEach, vi } from "vitest";
 import App from "~/app.vue";
 import { createTestingPinia } from "@pinia/testing";
 import { setActivePinia, createPinia } from "pinia";
 
-describe("app.vue", () => {
+describe("App Component", () => {
   let wrapper: ReturnType<typeof mount>;
 
   beforeEach(() => {
@@ -20,9 +20,9 @@ describe("app.vue", () => {
     wrapper.unmount();
   });
 
-  it("renders Progress components with correct titles", () => {
+  it("renders four Progress components with correct titles", () => {
     const progressComponents = wrapper.findAllComponents({ name: "Progress" });
-    expect(progressComponents).toHaveLength(4);
+    expect(progressComponents.length).toBe(4);
     expect(progressComponents[0].props("title")).toBe("Year");
     expect(progressComponents[1].props("title")).toBe("Month");
     expect(progressComponents[2].props("title")).toBe("Day");
