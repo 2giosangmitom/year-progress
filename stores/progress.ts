@@ -1,7 +1,4 @@
-import { getDayProgress } from "~/lib/utils/day";
-import { getHourProgress } from "~/lib/utils/hour";
-import { getMonthProgress } from "~/lib/utils/month";
-import { getYearProgress } from "~/lib/utils/year";
+import { getDayProgress, getHourProgress, getMonthProgress, getYearProgress } from "~/lib/utils";
 
 export const useProgressStore = defineStore("progress", {
   state: () => ({
