@@ -1,10 +1,10 @@
 import { describe, expect, it } from "vitest";
-import { mountSuspended } from "@nuxt/test-utils/runtime";
+import { mount } from "@vue/test-utils";
 import Header from "~/components/Header.vue";
 
 describe("Header", () => {
-  it("renders", async () => {
-    const wrapper = await mountSuspended(Header);
+  it("renders", () => {
+    const wrapper = mount(Header);
     expect(wrapper.html()).toContain("Year progress");
   });
 });
