@@ -1,9 +1,9 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
-  app: {
-    // baseURL: "/year-progress/",
-  },
   modules: ["@pinia/nuxt", "@nuxtjs/tailwindcss", "@nuxt/test-utils/module", "@nuxtjs/google-fonts"],
+  vite: {
+    base: "/year-progress/",
+  },
   tailwindcss: {
     config: {
       darkMode: "class",
