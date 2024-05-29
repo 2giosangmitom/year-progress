@@ -43,6 +43,6 @@ onMounted(() => {
 
 <style>
 * {
-  font-family: "Fira Code";
+  font-family: "Fira Code", monospace;
 }
 </style>
