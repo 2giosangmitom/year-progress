@@ -38,7 +38,7 @@ onMounted(() => {
     <Progress title="Hour" :progress="progress.hour" />
     <ToggleTheme />
   </main>
-  <Footer />
+  <TheFooter />
 </template>
 
 <style>
