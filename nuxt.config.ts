@@ -1,7 +1,7 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
   app: {
-    baseURL: "/year-progress/",
+    // baseURL: "/year-progress/",
   },
   modules: ["@pinia/nuxt", "@nuxtjs/tailwindcss", "@nuxt/test-utils/module", "@nuxtjs/google-fonts"],
   tailwindcss: {
