@@ -21,7 +21,7 @@ describe("App Component", () => {
   });
 
   it("renders four Progress components with correct titles", () => {
-    const progressComponents = wrapper.findAllComponents({ name: "Progress" });
+    const progressComponents = wrapper.findAllComponents({ name: "TheProgress" });
     expect(progressComponents.length).toBe(4);
     expect(progressComponents[0].props("title")).toBe("Year");
     expect(progressComponents[1].props("title")).toBe("Month");
