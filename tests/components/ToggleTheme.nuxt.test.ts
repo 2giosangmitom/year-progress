@@ -55,4 +55,14 @@ describe("ToggleTheme", () => {
     expect(themeStore.theme).toBe("dark");
     expect(document.documentElement.classList.contains("dark")).toBe(true);
   });
+
+  it("toggle correctly", () => {
+    const themeStore = useThemeStore();
+    themeStore.toggle();
+    expect(themeStore.theme).toBe("dark");
+    expect(document.documentElement.classList.contains("dark")).toBe(true);
+    themeStore.toggle();
+    expect(themeStore.theme).toBe("light");
+    expect(document.documentElement.classList.contains("dark")).toBe(false);
+  });
 });
