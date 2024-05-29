@@ -4,7 +4,7 @@
 [![Tests](https://github.com/2giosangmitom/year-progress/actions/workflows/test.yml/badge.svg)](https://github.com/2giosangmitom/year-progress/actions/workflows/test.yml)
 [![Deploy Nuxt.js site to Pages](https://github.com/2giosangmitom/year-progress/actions/workflows/deploy.yml/badge.svg)](https://github.com/2giosangmitom/year-progress/actions/workflows/deploy.yml)
 
-[Year Progress](https://2giosangmitom.is-a.dev/year-progress/) is a web application that provides a visual representation of the progress of the current year. It helps users see how far they are into the year, month, day, and even the current hour at a glance. This project is built using Nuxt.js, with Tailwind CSS for styling, Vitest for testing, Pinia for state management, and TypeScript for type safety.
+[Year Progress](https://year-progress-kappa.vercel.app/) is a web application that provides a visual representation of the progress of the current year. It helps users see how far they are into the year, month, day, and even the current hour at a glance. This project is built using Nuxt.js, with Tailwind CSS for styling, Vitest for testing, Pinia for state management, and TypeScript for type safety.
 
 ## Features ✨
 
