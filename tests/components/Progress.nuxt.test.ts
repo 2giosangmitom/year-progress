@@ -37,4 +37,22 @@ describe("Progress.vue", () => {
     expect(progressBar.attributes("aria-label")).toBe("Year progress");
     expect(progressBar.find("div").element.style.width).toBe("75.12345%");
   });
+
+  it("updates store progress", () => {
+    const mockDate = new Date(2023, 0, 1, 12, 30, 15, 500); // January 1, 2023 12:30:15.500
+    vi.setSystemTime(mockDate);
+    const expectedHourProgress = (30 / 60 + 15 / 3600 + 500 / 3600000) * 100;
+    const expectedDayProgress = ((12 + expectedHourProgress / 100) / 24) * 100;
+    const expectedMonthProgress = (expectedDayProgress / 100 / 31) * 100;
+    const expectedYearProgress = (2 / 365) * 100;
+
+    const store = useProgressStore();
+    store.update();
+    expect(store.hour).toBe(expectedHourProgress);
+    expect(store.day).toBe(expectedDayProgress);
+    expect(store.month).toBe(expectedMonthProgress);
+    expect(store.year).toBe(expectedYearProgress);
+
+    vi.useRealTimers();
+  });
 });
