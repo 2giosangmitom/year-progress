@@ -1,5 +1,5 @@
 import { mount } from "@vue/test-utils";
-import ToggleTheme from "@/components/ToggleTheme.vue";
+import { ToggleTheme } from "~/components";
 import { createTestingPinia } from "@pinia/testing";
 import { useThemeStore } from "@/stores/theme";
 import { describe, it, expect, afterEach, vi, beforeEach } from "vitest";
