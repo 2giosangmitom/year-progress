@@ -23,10 +23,9 @@ onMounted(() => {
   const intervalId = setInterval(() => {
     progress.update();
   }, 0);
-});
-
-onUnmounted(() => {
-  clearInterval(intervalId);
+  onUnmounted(() => {
+    clearInterval(intervalId);
+  });
 });
 </script>
 
