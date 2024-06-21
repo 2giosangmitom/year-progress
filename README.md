@@ -36,7 +36,7 @@ Before you begin, ensure you have the following installed on your local developm
 - **pnpm (v9):** A fast, disk space-efficient package manager.
 
 > [!TIP]
-> This project includes a `flake.nix` file for dependency management. If you have [Nix](https://nixos.org/download) installed, you can run `nix develop` in the project root to automatically set up the development environment without manually installing Node.js and pnpm. ❄️
+> This repository includes a `flake.nix` file to set up the development environment for the Nuxt.js project. If you have Nix installed, simply run `nix develop` in the project root to avoid installing prerequisites manually. ❄️
 
 ### Installation ⚙️
 
