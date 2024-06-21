@@ -1,30 +1,27 @@
 {
-  description = "A website for tracking the progress of the current year visually";
+  description = "NodeJS project flake template";
   inputs = {
     nixpkgs.url = "nixpkgs/nixos-unstable";
+    flake-utils.url = "github:numtide/flake-utils";
   };
 
   outputs = {
     nixpkgs,
+    flake-utils,
     ...
-  }: let
-    system = "x86_64-linux";
-    pkgs = import nixpkgs {
-      inherit system;
-      config = {
-        allowUnfree = true;
-      };
-    };
-  in {
-    devShells.${system}.default = pkgs.mkShell {
-      buildInputs = with pkgs; [
-        alejandra
-        nil
-        nodejs_20
-        corepack_20
-        nodePackages.prettier
-      ];
-    };
-    formatter.${system} = pkgs.alejandra;
-  };
+  }:
+    flake-utils.lib.eachDefaultSystem (
+      system: let
+        pkgs = import nixpkgs {inherit system;};
+      in {
+        devShells.default = pkgs.mkShell {
+          buildInputs = with pkgs; [
+            alejandra
+            nil
+            nodejs_20
+            corepack_20
+          ];
+        };
+      }
+    );
 }
