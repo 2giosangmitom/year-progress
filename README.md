@@ -3,19 +3,21 @@
 [![Codecov](https://codecov.io/gh/2giosangmitom/year-progress/graph/badge.svg?token=ZEV3SVGNJF)](https://codecov.io/gh/2giosangmitom/year-progress)
 [![Tests](https://github.com/2giosangmitom/year-progress/actions/workflows/test.yml/badge.svg)](https://github.com/2giosangmitom/year-progress/actions/workflows/test.yml)
 
-[Year Progress](https://year-progress-kappa.vercel.app/) is a web application that provides a visual representation of the progress of the current year. It helps users see how far they are into the year, month, day, and even the current hour at a glance. This project is built using Nuxt.js, with Tailwind CSS for styling, Vitest for testing, Pinia for state management, and TypeScript for type safety.
+**Year Progress** is a web application that provides a visual representation of the progress of the current year. It helps users see how far they are into the year, month, day, and even the current hour at a glance.
 
-## Features ✨
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/2giosangmitom/year-progress?quickstart=1)
+
+## Features
 
 - **Visual Progress Bars**:
-  - **Year Progress**: Dynamic progress bar showing the percentage of the year that has passed. 🏔️
-  - **Month Progress**: Displays how far along the current month is. 🐻
-  - **Day Progress**: Indicates the progress of the current day. 🐼
-  - **Hour Progress**: Shows the current hour's progress. 🐶
-- **Responsive Design**: Compatible with various screen sizes and devices. 📱💻
-- **Theme Toggle**: Easily switch between dark and light themes. 🌙☀️
+  - **Year Progress**: Dynamic progress bar showing the percentage of the year that has passed.
+  - **Month Progress**: Displays how far along the current month is.
+  - **Day Progress**: Indicates the progress of the current day.
+  - **Hour Progress**: Shows the current hour's progress.
+- **Responsive Design**: Compatible with various screen sizes and devices.
+- **Theme Toggle**: Easily switch between dark and light themes.
 
-## Technologies Used 🛠️
+## Technologies Used
 
 - **Nuxt.js**: Progressive framework based on Vue.js for building modern web applications.
 - **Vue.js**: Versatile JavaScript framework for building user interfaces.
@@ -24,19 +26,19 @@
 - **Vitest**: Vite-native unit testing framework.
 - **Pinia**: State management library for Vue.js applications.
 
-## Getting Started 🚀
+## Getting Started
 
-### Prerequisites 📋
+### Prerequisites
 
 Ensure you have the following installed on your local development environment:
 
-- Node.js (version 20) 🌐
-- pnpm 📦
+- Node.js (v20)
+- pnpm (v9)
 
-> [!TIP]
-> The project includes a `flake.nix` file for dependency management, enabling developers to leverage `nix develop` for a convenient development environment setup. You can use `nix develop` to enter the development environment without installing prerequisites manually with [Nix](https://nixos.org/download). ❄️
+> [!NOTE]
+> This project includes a `flake.nix` file for dependency management. If you have [Nix](https://nixos.org/download) installed, you can run `nix develop` to set up the development environment without manually installing the prerequisites. ❄️
 
-### Installation ⚙️
+### Installation
 
 1. Clone the repository:
 
@@ -51,7 +53,7 @@ Ensure you have the following installed on your local development environment:
    pnpm install
    ```
 
-### Running the Development Server ▶️
+### Running the Development Server
 
 Start the development server and open the application in your browser:
 
@@ -59,9 +61,9 @@ Start the development server and open the application in your browser:
 pnpm run dev
 ```
 
-The application will be available at `http://localhost:3000/year-progress`. 🌐
+The application will be available at `http://localhost:3000/year-progress`.
 
-### Building for Production 🏗️
+### Building for Production
 
 To build the application for production, run:
 
@@ -70,9 +72,9 @@ pnpm run build
 pnpm run preview
 ```
 
-The application will be available at `http://localhost:3000/year-progress`. 🌐
+The application will be available at `http://localhost:3000/year-progress`.
 
-### Testing ✅
+### Testing
 
 To run the tests with Vitest, use:
 
@@ -80,11 +82,11 @@ To run the tests with Vitest, use:
 pnpm run test
 ```
 
-### Deployment 🌍
+### Deployment
 
 You can deploy the built application to any static hosting service, such as Vercel, Netlify, or GitHub Pages. Follow the specific deployment instructions provided by the hosting service.
 
-- Official document: [https://nuxt.com/deploy](https://nuxt.com/deploy)
+- Official documentation: [https://nuxt.com/deploy](https://nuxt.com/deploy)
 
 ---
 
