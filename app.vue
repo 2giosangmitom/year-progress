@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import "iconify-icon";
 useHead({
   title: "Year progress",
   meta: [
@@ -9,8 +10,7 @@ useHead({
   ],
   link: [{ rel: "icon", type: "image/png", href: "favicon.ico" }],
   bodyAttrs: {
-    class:
-      "bg-gradient-to-r from-zinc-300 via-zinc-400 to-zinc-500 dark:bg-gradient-to-r dark:from-stone-950 dark:via-stone-900 dark:to-stone-800 dark:text-slate-50 duration-500",
+    class: "bg-zinc-300 dark:bg-stone-950 dark:text-slate-50 duration-500",
   },
   htmlAttrs: {
     lang: "en",

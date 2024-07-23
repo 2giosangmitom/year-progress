@@ -1,5 +1,5 @@
 {
-  description = "NodeJS project flake template";
+  description = "A website for tracking the progress of the current year visually";
   inputs = {
     nixpkgs.url = "nixpkgs/nixos-unstable";
     flake-utils.url = "github:numtide/flake-utils";
@@ -16,10 +16,8 @@
       in {
         devShells.default = pkgs.mkShell {
           buildInputs = with pkgs; [
-            alejandra
-            nil
             nodejs_20
-            corepack_20
+            pnpm
           ];
         };
       }
