@@ -1,17 +1,16 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
-  modules: ["@pinia/nuxt", "@nuxtjs/tailwindcss", "@nuxt/test-utils/module", "@nuxtjs/google-fonts", "@nuxt/eslint"],
+  modules: ["@pinia/nuxt", "@nuxtjs/tailwindcss", "@nuxt/test-utils/module", "@nuxt/eslint", "@nuxt/fonts"],
   tailwindcss: {
     config: {
       darkMode: "class",
     },
   },
-  googleFonts: {
-    families: {
-      "Fira Code": {
-        wght: 600,
-      },
+  vue: {
+    compilerOptions: {
+      isCustomElement: (tag) => tag === "iconify-icon",
     },
-    subsets: "latin",
   },
+  compatibilityDate: "2024-07-23",
 });
+
