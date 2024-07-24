@@ -38,30 +38,37 @@ Before you begin, ensure you have the following installed on your local developm
 > [!TIP]
 > This repository includes a `flake.nix` file to set up the development environment for the Nuxt.js project. If you have Nix installed, simply run `nix develop` in the project root to avoid installing prerequisites manually. ❄️
 
-### Installation ⚙️
+### Run Development Server 🖥️
+
+Follow these steps to get a local copy of the portfolio up and running on your machine:
 
 1. **Clone the Repository:**
 
    ```bash
    git clone https://github.com/2giosangmitom/year-progress.git
+   ```
+   
+2. **Navigate to the Project Directory:**
+
+   ```bash
    cd year-progress
    ```
 
-2. **Install the Dependencies:**
+3. **Install Dependencies:**
 
    ```bash
    pnpm install
    ```
+   
+4. **Run the Development Server:**
 
-### Running the Development Server 🖥️
+   ```bash
+   pnpm dev
+   ```
 
-Start the development server and open the application in your browser:
+5. **Open in Your Browser:**
 
-```bash
-pnpm run dev
-```
-
-The application will be available at `http://localhost:3000`.
+   Open your web browser and navigate to `http://localhost:3000` to view the website.
 
 ### Building for Production 🏗️
 
@@ -79,7 +86,7 @@ The application will be available at `http://localhost:3000`.
 To run the tests with Vitest, use:
 
 ```bash
-pnpm run test
+pnpm test
 ```
 
 ### Deployment 🚢
