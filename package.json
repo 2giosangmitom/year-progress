@@ -21,7 +21,7 @@
     "iconify-icon": "^2.1.0",
     "nuxt": "^3.12.4",
     "pinia": "^2.1.7",
-    "vue": "^3.4.33"
+    "vue": "^3.4.35"
   },
   "devDependencies": {
     "@nuxt/test-utils": "^3.13.1",
